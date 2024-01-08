@@ -17,6 +17,10 @@ html{
 p{
     font-size: var(--text-font-size);
 }
+a{
+    text-decoration: none;
+    color: var(--text-color);
+}
 
 /* Setting up the button grid */
 .btn-grid{
@@ -57,7 +61,7 @@ padding-left: 2rem;
 width: 100%;
 }
 
-@media (max-width: 500px){
+@media (max-width: 800px){
     .btn-grid{
         display:block;
     }
