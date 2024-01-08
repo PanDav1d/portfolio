@@ -1,0 +1,63 @@
+:root{
+    --bg-color: #202020;
+    --text-color: #dbdbdb;
+    --font-family: "Source Code Pro", monospace;
+    --title-font-size: 32px;
+    --text-font-size: 22px;
+}
+html{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+}
+.title{
+    font-size: var(--title-font-size);
+}
+
+p{
+    font-size: var(--text-font-size);
+}
+
+/* Setting up the button grid */
+.btn-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 35px;
+    grid-row-gap: 35px;
+    padding: 4vw;
+}
+.grid-item{
+    border: solid 2px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 0px 0px var(--text-color);
+    -webkit-box-shadow: 10px 10px 0px 0px var(--text-color);
+    -moz-box-shadow: 10px 10px 0px 0px var(--text-color);
+    height: 22vh;
+    transition: 0.3s;
+}
+.grid-item:hover{
+    transform: translateX(10px) translateY(10px);
+    box-shadow: 0px 0px 0px 0px var(--text-color);
+    -webkit-box-shadow: 0px 0px 0px 0px var(--text-color);
+    -moz-box-shadow: 0px 0px 0px 0px var(--text-color);
+    cursor:pointer;
+}
+.grid-item>span{
+    text-align: center;
+    font-size: 6rem;
+    height: 60%;
+    margin: 20px 0 0 0;
+    width: 100%;
+}
+.grid-item>p{
+margin: 0;
+padding-left: 2rem;
+width: 100%;
+}
+
+@media (max-width: 500px){
+    .btn-grid{
+        display:block;
+    }
+}
