@@ -33,7 +33,8 @@ p{
     box-shadow: 10px 10px 0px 0px var(--text-color);
     -webkit-box-shadow: 10px 10px 0px 0px var(--text-color);
     -moz-box-shadow: 10px 10px 0px 0px var(--text-color);
-    height: 22vh;
+    height: fit-content;
+    padding: 1rem;
     transition: 0.3s;
 }
 .grid-item:hover{
