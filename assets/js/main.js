@@ -1,6 +1,6 @@
 var isDark = true;
-const dark = ["#202020", "#dbdbdb"];
-const light = ["#dbdbdb", "#202020"];
+const dark = ["#202020", "#B2A59B"];
+const light = ["#FAEED1", "#607274"];
 
 // Function to set a cookie
 function setCookie(name, value, days) {

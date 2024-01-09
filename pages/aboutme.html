@@ -15,6 +15,20 @@
         <p class="title"><a href="/index.html" class="route-link">david_mueller</a> / about_me</p>
     </div>
     <div class="main">
+        
+        <p>personal_information:</p>
+        <p>david_mueller</p>
+        <p></p>
+        <p id="age"></p>
+        
+        
+        <p>technologies:</p>
+        <ul class="tag-list">
+            <li class="tag">python</li>
+            <li class="tag">html</li>
+            <li class="tag">c#</li>
+            <li class="tag">css</li>
+        </ul>
 
     </div>
 
@@ -32,6 +46,19 @@ contrast
         // Beispiel: Schließe ein Modal, setze eine Variable zurück, etc.
     }
 });
+
+    </script>
+    <script>
+        const birthdate = new Date("2003-08-30");
+        const currDate = new Date();
+        if(currDate.getMonth() > birthdate.getMonth() && currDate.getDay() < birthdate.getDay()){
+            document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear();
+        }else if(currDate.getDay() > birthdate.getDay()){
+            document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear();
+        }
+        else{
+            document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear() - 1;
+        }
 
     </script>
 </body>
