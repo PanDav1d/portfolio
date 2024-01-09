@@ -27,6 +27,32 @@ a{
     overflow-y: hidden;
 }
 
+#switch-theme{
+    background-color: var(--bg-color);
+    cursor:pointer;
+    z-index: 100;
+    position: fixed;
+    bottom: 2vw;
+    right: 2vw;
+    padding: 10px;
+    border: solid 2px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 0px 0px var(--text-color);
+    -webkit-box-shadow: 2px 2px 0px 0px var(--text-color);
+    -moz-box-shadow: 2px 2px 0px 0px var(--text-color);
+    transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+#switch-theme:hover{
+    transform: translateX(1px) translateY(1px);
+    box-shadow: 1px 1px 0px 0px var(--text-color);
+    -webkit-box-shadow: 1px 1px 0px 0px var(--text-color);
+    -moz-box-shadow: 1px 1px 0px 0px var(--text-color);
+}
+#switch-theme>span{
+    color: var(--text-color);
+    font-size: var(--text-font-size);
+}
+
 /* Setting up the button grid */
 .btn-grid{
     display: grid;
@@ -44,7 +70,7 @@ a{
     -moz-box-shadow: 10px 10px 0px 0px var(--text-color);
 height: 24vh;
     padding: 1rem;
-    transition: 0.3s;
+    transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
     display: block;
 }
 .grid-item:hover{

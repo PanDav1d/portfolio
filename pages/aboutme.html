@@ -3,7 +3,7 @@
 
 <head>
     <title>david_mueller portfolio - about_me</title>
-    <link rel="stylesheet" href="../assets/styles/style.css">
+    <link rel="stylesheet" href="/assets/styles/style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:monospace">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
@@ -11,11 +11,28 @@
 
 <body>
     <div class="title-bar">
-        <p class="title"><a href="/index.html">david_mueller</a> / about_me</p>
+        <p class="title"><a href="/index.html" class="route-link">david_mueller</a> / about_me</p>
     </div>
     <div class="main">
 
     </div>
+
+        <a id="switch-theme" onclick="switchTheme();">
+        <span class="material-symbols-outlined">
+contrast
+</span>
+    </a>
+    <script src="/assets/js/main.js"></script>
+    <script>
+        document.documentElement.addEventListener('keydown', function (event) {
+    if (event.key === 'Escape') {
+        // Führe hier deine Aktion aus, wenn die Escape-Taste gedrückt wurde
+        console.log('Escape-Taste wurde gedrückt!');
+        // Beispiel: Schließe ein Modal, setze eine Variable zurück, etc.
+    }
+});
+
+    </script>
 </body>
 
 </html>
