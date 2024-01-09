@@ -23,8 +23,8 @@ a{
     color: var(--text-color);
 }
 
-.no-overflow{
-    overflow: hidden;
+.no-overflow-y{
+    overflow-y: hidden;
 }
 
 /* Setting up the button grid */
