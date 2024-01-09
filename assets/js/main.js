@@ -49,3 +49,19 @@ document.addEventListener('keydown', function (event) {
         switchTheme();
     }
 });
+
+
+function copyToClipboard(text){
+    var mailIcon = document.getElementById("mail");
+    mailIcon.removeAttribute("class");
+    mailIcon.classList.add("bi");
+    mailIcon.classList.add("bi-clipboard-check");
+    mailIcon.parentElement.style.backgroundColor = "#186F65";
+    navigator.clipboard.writeText(text);
+    setTimeout(function(){
+        mailIcon.removeAttribute("class");
+        mailIcon.classList.add("bi");
+        mailIcon.classList.add("bi-envelope");
+        mailIcon.parentElement.style.backgroundColor = "#ffffff00";
+    },2000);
+}

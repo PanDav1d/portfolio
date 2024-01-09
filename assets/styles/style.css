@@ -72,7 +72,7 @@ a{
     box-shadow: 10px 10px 0px 0px var(--text-color);
     -webkit-box-shadow: 10px 10px 0px 0px var(--text-color);
     -moz-box-shadow: 10px 10px 0px 0px var(--text-color);
-    height: 24vh;
+    height: fit-content;
     padding: 1rem;
     transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
     display: block;
