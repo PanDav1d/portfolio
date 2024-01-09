@@ -16,48 +16,62 @@
         <p class="title"><a href="/index.html" class="route-link">david_mueller</a> / about_me</p>
     </div>
     <div class="main">
-        
-        <p>personal_information:</p>
-        <p>david_mueller</p>
-        <p></p>
-        <p id="age"></p>
-        
-        
-        <p>technologies:</p>
-        <ul class="tag-list">
-            <li class="tag">python</li>
-            <li class="tag">html</li>
-            <li class="tag">c#</li>
-            <li class="tag">css</li>
+        <ul class="btn-grid">
+            <li class="grid-item">
+                <p class="grid-title">personal_information:</p>
+                <div class="grid-item-content">
+                    <p>name:david_mueller</p>
+                    <p id="age"></p>
+                </div>
+
+            </li>
+            <li class="grid-item">
+                <p class="grid-title">technologies:</p>
+                <div class="grid-item-content">
+                    <ul class="tag-list">
+                        <li class="tag">python</li>
+                        <li class="tag">html</li>
+                        <li class="tag">c#</li>
+                        <li class="tag">css</li>
+                    </ul>
+
+                </div>
+            </li>
         </ul>
+
+
+
+
+
 
     </div>
 
-        <a id="switch-theme" onclick="switchTheme();">
+    <a id="switch-theme" onclick="switchTheme();">
         <span class="material-symbols-outlined">
-contrast
-</span>
+            contrast
+        </span>
     </a>
     <script src="/assets/js/main.js"></script>
     <script>
         document.documentElement.addEventListener('keydown', function (event) {
-    if (event.key === 'Escape') {
-        // Führe hier deine Aktion aus, wenn die Escape-Taste gedrückt wurde
-        console.log('Escape-Taste wurde gedrückt!');
-        // Beispiel: Schließe ein Modal, setze eine Variable zurück, etc.
-    }
-});
+            if (event.key === 'Escape') {
+                // Führe hier deine Aktion aus, wenn die Escape-Taste gedrückt wurde
+                console.log('Escape-Taste wurde gedrückt!');
+                // Beispiel: Schließe ein Modal, setze eine Variable zurück, etc.
+            }
+        });
 
     </script>
     <script>
         const birthdate = new Date("2003-08-30");
         const currDate = new Date();
-        if(currDate.getMonth() > birthdate.getMonth() && currDate.getDay() < birthdate.getDay()){
+        document.getElementById("age").innerHTML = "age:";
+        if (currDate.getMonth() > birthdate.getMonth() && currDate.getDay() < birthdate.getDay()) {
             document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear();
-        }else if(currDate.getDay() > birthdate.getDay()){
+        } else if (currDate.getDay() > birthdate.getDay()) {
             document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear();
         }
-        else{
+        else {
             document.getElementById("age").innerHTML += currDate.getFullYear() - birthdate.getFullYear() - 1;
         }
 

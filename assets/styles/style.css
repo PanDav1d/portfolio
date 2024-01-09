@@ -100,18 +100,23 @@ a{
 }
 .grid-item>p{
     margin: 0;
-    padding-left: 2rem;
     width: 100%;
 }
 
+.grid-item-content{
+    margin-left: 2rem;
+}
+
 .tag-list{
-    display: inline-flex;
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
+    padding-left: 0;
 }
 .tag{
     cursor: pointer;
-    margin: 0 0 0 5%;
-    padding: 5% 8%;
+    margin: 2% 0 0 3%;
+    padding: 3% 5%;
     border: solid 2px;
     border-radius: 18px;
     box-shadow: 2px 2px 0px 0px var(--text-color);
@@ -155,6 +160,39 @@ a{
     font-size: small;
 }
 
+.aboutme-list{
+    padding: 5%;
+    width: 100%;
+    list-style: none;
+}
+.aboutme-item{
+    margin: 0 0 2rem 0;
+    padding: 2%;
+    border: solid 2px;
+    border-radius: 8px;
+    box-shadow: 10px 10px 0px 0px var(--text-color);
+    -webkit-box-shadow: 10px 10px 0px 0px var(--text-color);
+    -moz-box-shadow: 10px 10px 0px 0px var(--text-color);
+    max-width: 50%;
+    transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+.aboutme-item:hover{
+    transform: translateX(5px) translateY(5px);
+    box-shadow: 5px 5px 0px 0px var(--text-color);
+    -webkit-box-shadow: 5px 5px 0px 0px var(--text-color);
+    -moz-box-shadow: 5px 5px 0px 0px var(--text-color);
+    cursor:pointer;
+}
+
+.documentation-content{
+    width: calc(100% - 20rem);
+    margin:0 10rem 20rem 10rem;
+}
+.documentation-content > img{
+    width: 100%;
+    height: auto;
+}
+
 
 @media screen and (max-width: 800px) {
     :root{
@@ -175,6 +213,10 @@ a{
     .working-item{
         max-width: calc(100% - 10%);
         width: 100%;
+    }
+    .documentation-content{
+        width:  calc(100% - 4rem);
+        margin: 0 2rem;
     }
 }
 @media screen and (min-width: 801px) {
