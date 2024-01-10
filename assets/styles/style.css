@@ -6,6 +6,10 @@
     --text-font-size: 22px;
 }
 
+html, body{
+    cursor: url("/assets/ico/cursor.ico"), default;
+}
+
 body {
   --sb-track-color: var(--bg-color);
   --sb-thumb-color: var(--text-color);
