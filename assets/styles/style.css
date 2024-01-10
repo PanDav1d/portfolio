@@ -5,6 +5,30 @@
     --title-font-size: 5vh;
     --text-font-size: 22px;
 }
+
+body {
+  --sb-track-color: var(--bg-color);
+  --sb-thumb-color: var(--text-color);
+  --sb-size: 5px;
+
+  scrollbar-color: var(--sb-thumb-color) 
+                   var(--sb-track-color);
+}
+
+body::-webkit-scrollbar {
+  width: var(--sb-size) 
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--sb-track-color);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--sb-thumb-color);
+  border-radius: 4px;
+  }
+
 ::selection{
     background-color: var(--text-color);
     color: var(--bg-color);
@@ -28,7 +52,7 @@ a{
 }
 
 .no-overflow-y{
-    overflow-y: hidden;
+    overflow-x: hidden;
 }
 
 #switch-theme{
