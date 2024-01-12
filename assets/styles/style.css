@@ -7,7 +7,7 @@
 }
 
 html, body{
-    cursor: url("/assets/ico/cursor.ico"), default;
+    cursor: url("/assets/ico/cursor.cur");
 }
 
 body {
