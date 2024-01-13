@@ -1,6 +1,34 @@
 var isDark = true;
+var allowCookies = true;
 const dark = ["#202020", "#B2A59B"];
 const light = ["#FAEED1", "#607274"];
+
+const cookiesAllowed = getCookie('allowCookies');
+console.log(cookiesAllowed);
+if(cookiesAllowed){
+    if(cookiesAllowed == 'allow' && window.location.pathname === "/index.html"){
+        document.getElementById("plane").style.opacity = 0;
+        document.getElementById("plane").style.pointerEvents = "None";
+        document.getElementById("cookiesChoice").style.opacity = 0;
+        document.getElementById("cookiesChoice").style.pointerEvents = "None";
+    }
+}else{
+    console.log("Not allowed");
+}
+
+function acceptCookies(choice){
+    if(choice){
+        allowCookies = true;
+        setCookie('allowCookies', 'allow',30);
+        console.log("Setted the cookie");
+    }else{
+        allowCookies = false;
+    }
+    document.getElementById("plane").style.opacity = 0;
+    document.getElementById("plane").style.pointerEvents = "None";
+    document.getElementById("cookiesChoice").style.opacity = 0;
+    document.getElementById("cookiesChoice").style.pointerEvents = "None";
+}
 
 // Function to set a cookie
 function setCookie(name, value, days) {

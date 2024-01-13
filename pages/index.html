@@ -11,6 +11,7 @@
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
+
 <body class="no-overflow-y">
     <div class="title-bar">
         <p class="title">david_mueller / startside</p>
@@ -37,21 +38,22 @@
             </a>
         </div>
     </div>
-    <div id="plane"></div>
-    <div id="cookiesChoice" class="modal br-8 p-5">
-        <p>cookies</p>
-        <div class="btn-group">
-            <a class="btn-sm br-8 btn-accept" onclick="acceptCookies(true);">allow</a>
-            <a class="btn-sm br-8 btn-decline" onclick="acceptCookies(false);">disallow</a>
-        </div>
-    </div>
-
     <a id="switch-theme" onclick="switchTheme();">
         <span class="material-symbols-outlined">
             contrast
         </span>
     </a>
 
+    <div id="cookiesChoice" class="modal br-8 p-5">
+        <p>Cookies</p>
+        <div class="btn-group">
+            <a class="btn-sm btn-accept br-8" onclick="acceptCookies(true);">Allow</a>
+            <a class="btn-sm btn-decline br-8" onclick="acceptCookies(false);">Not Allow</a>
+        </div>
+    </div>
+    <div id="plane"></div>
+
+    <script src="/assets/js/cookies.js"></script>
     <script src="/assets/js/main.js"></script>
 </body>
 
