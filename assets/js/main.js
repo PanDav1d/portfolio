@@ -3,24 +3,26 @@ var allowCookies = true;
 const dark = ["#202020", "#B2A59B"];
 const light = ["#FAEED1", "#607274"];
 
+
 const cookiesAllowed = getCookie('allowCookies');
-console.log(cookiesAllowed);
 if(cookiesAllowed){
     if(cookiesAllowed == 'allow' && window.location.pathname === "/index.html"){
         document.getElementById("plane").style.opacity = 0;
         document.getElementById("plane").style.pointerEvents = "None";
         document.getElementById("cookiesChoice").style.opacity = 0;
         document.getElementById("cookiesChoice").style.pointerEvents = "None";
+    }else{
+        allowCookies = false;
     }
 }else{
-    console.log("Not allowed");
+    allowCookies = false;
 }
+
 
 function acceptCookies(choice){
     if(choice){
         allowCookies = true;
         setCookie('allowCookies', 'allow',30);
-        console.log("Setted the cookie");
     }else{
         allowCookies = false;
     }
@@ -51,6 +53,9 @@ function switchTheme() {
     document.documentElement.style.setProperty('--bg-color', selectedTheme[0]);
     document.documentElement.style.setProperty('--text-color', selectedTheme[1]);
 
+    if(allowCookies == false){
+        return;
+    }
     // Save the theme to a cookie
     setCookie('theme', isDark ? 'dark' : 'light', 30); // Save the theme for 30 days
 }
