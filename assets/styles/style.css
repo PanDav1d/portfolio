@@ -145,6 +145,12 @@ a{
     transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
 }
 
+@media screen and (max-width: 800px) {
+    .modal{
+        width: calc(100% - 8rem);
+    }
+}
+
 .br-8{
     border-radius: 8px;
 }
