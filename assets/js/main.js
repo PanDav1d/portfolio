@@ -106,7 +106,7 @@ function triggerAlert(text,icon,color){
     alert.style.backgroundColor = color;
     alert.style.display = "flex";
     alert.style.opacity = "1";
-    alert.style.transform = "translateX(-50%) translateY(1%)";
+    alert.style.transform = "translateX(-50%) translateY(25%)";
 
     copyToClipboard("muellerdavid.3008@gmail.com");
 

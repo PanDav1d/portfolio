@@ -3,7 +3,7 @@
     --text-color: #dbdbdb;
     --font-family: "Source Code Pro", monospace;
     --title-font-size: 2vw;
-    --text-font-size: 20px;
+    --text-font-size: calc(1dvw + 1dvh);
 
     --accept: #02a267;
     --decline: #bb4434;
@@ -184,13 +184,16 @@ a{
     position: fixed;
     bottom: 2vw;
     right: 2vw;
-    padding: 10px;
+    padding: 1vh;
     border: solid 2px;
     border-radius: 8px;
     box-shadow: 2px 2px 0px 0px var(--text-color);
     -webkit-box-shadow: 2px 2px 0px 0px var(--text-color);
     -moz-box-shadow: 2px 2px 0px 0px var(--text-color);
     transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+}
+#switch-theme>span{
+    font-size: var(--text-font-size);
 }
 #switch-theme:hover{
     transform: translateX(1px) translateY(1px);
@@ -214,7 +217,7 @@ a{
 }
 .grid-item{
     display: block;
-    max-height: 200px;
+    max-height: 46vh;
     overflow-y: scroll;
 }
 .grid-item:has(.profile-img){
@@ -255,6 +258,7 @@ a{
     -webkit-box-shadow: 2px 2px 0px 0px var(--text-color);
     -moz-box-shadow: 2px 2px 0px 0px var(--text-color);
     transition: 0.3s cubic-bezier(.68,-0.55,.27,1.55);
+    font-size: var(--text-font-size);
 }
 .tag>*{
     margin-left: 3px;
@@ -379,7 +383,7 @@ a{
     left: 50%;
     transform: translateX(-50%) translateY(150px);
     display: flex;
-    opacity: 1;
+    opacity: 0;
     justify-content: center;
     align-items:center;
     flex-flow: row;
@@ -396,6 +400,7 @@ a{
 }
 #alert>*{
     margin: 0;
+    font-size: var(--text-font-size);
     color: white;
 }
 #alert>p{
@@ -404,9 +409,10 @@ a{
 
 
 .profile-img{
-    width: 100%;
-    display: flex;
+    width: 20dvw;
+    display:flex;
     overflow-y: hidden;
+    align-self: flex-end;
 }
 
 
@@ -421,7 +427,6 @@ a{
 
     .grid-item {
        margin: 0 1rem 2rem 1rem;
-       height: 0%;
     }
     .working-list{
         display: block;
@@ -435,10 +440,13 @@ a{
         width:  calc(100% - 4rem);
         margin: 0 2rem;
     }
+    .profile-img{
+        width: 40dvw;
+    }
 }
 @media screen and (min-width: 801px) {
     .btn-grid {
         margin: 0 auto; /* Zentriere das Grid und füge mehr Raum an den Seiten hinzu */
-        max-width: 50%; /* Optional: Setze eine maximale Breite für das Grid */
+        max-width: 80%; /* Optional: Setze eine maximale Breite für das Grid */
     }
 }
