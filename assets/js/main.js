@@ -97,3 +97,22 @@ function copyToClipboard(text){
         mailIcon.parentElement.style.backgroundColor = "#ffffff00";
     },2000);
 }
+
+function triggerAlert(text,icon,color){
+    const alert = document.getElementById("alert");
+    const startPosition = alert.style.bottom;
+    alert.querySelector('span').innerHTML = icon;
+    alert.querySelector('p').innerHTML = text;
+    alert.style.backgroundColor = color;
+    alert.style.display = "flex";
+    alert.style.opacity = "0";
+
+    setTimeout(function(){
+        alert.style.opacity = 1;
+    },100);
+
+    setTimeout(function(){
+        alert.style.opacity = "0";
+    },4020);
+
+}
