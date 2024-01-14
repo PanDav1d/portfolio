@@ -108,7 +108,7 @@ function triggerAlert(text,icon,color){
     alert.style.opacity = "0";
 
     setTimeout(function(){
-        alert.style.opacity = 1;
+        alert.style.opacity = "1";
     },100);
 
     setTimeout(function(){
