@@ -100,19 +100,19 @@ function copyToClipboard(text){
 
 function triggerAlert(text,icon,color){
     const alert = document.getElementById("alert");
-    const startPosition = alert.style.bottom;
+    const startPos = alert.style.transform;
     alert.querySelector('span').innerHTML = icon;
     alert.querySelector('p').innerHTML = text;
     alert.style.backgroundColor = color;
     alert.style.display = "flex";
-    alert.style.opacity = "0";
+    alert.style.opacity = "1";
+    alert.style.transform = "translateX(-50%) translateY(1%)";
 
-    setTimeout(function(){
-        alert.style.opacity = 1;
-    },100);
+    copyToClipboard("muellerdavid.3008@gmail.com");
 
     setTimeout(function(){
         alert.style.opacity = "0";
-    },4020);
+        alert.style.transform = startPos;
+    },3520);
 
 }
