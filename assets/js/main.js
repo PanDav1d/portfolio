@@ -89,7 +89,6 @@ function copyToClipboard(text){
     mailIcon.removeAttribute("class");
     mailIcon.classList.add("bi");
     mailIcon.classList.add("bi-clipboard-check");
-    mailIcon.parentElement.style.backgroundColor = "#186F65";
     navigator.clipboard.writeText(text);
     setTimeout(function(){
         mailIcon.removeAttribute("class");
