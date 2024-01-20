@@ -4,9 +4,9 @@ const dark = ["#202020", "#B2A59B"];
 const light = ["#FAEED1", "#607274"];
 
 
-const cookiesAllowed = getCookie('allowCookies');
-if(cookiesAllowed){
-    if(cookiesAllowed == 'allow' && window.location.pathname === "/index.html"){
+const cookieExists = getCookie('allowCookies');
+if(cookieExists){
+    if(cookieExists == 'allow' && window.location.pathname === "/index.html"){
         document.getElementById("plane").style.opacity = 0;
         document.getElementById("plane").style.pointerEvents = "None";
         document.getElementById("cookiesChoice").style.opacity = 0;
@@ -14,7 +14,11 @@ if(cookiesAllowed){
     }else{
         allowCookies = false;
     }
-}else{
+}else if(window.location.pathname === "/index.html"){
+    document.getElementById("plane").style.opacity = 1;
+    document.getElementById("plane").style.pointerEvents = "all";
+    document.getElementById("cookiesChoice").style.opacity = 1;
+    document.getElementById("cookiesChoice").style.pointerEvents = "all";
     allowCookies = false;
 }
 
