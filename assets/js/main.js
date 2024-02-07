@@ -1,6 +1,7 @@
 var isDark = true;
 var allowCookies = true;
-const dark = ["#202020", "#B2A59B"];
+// [bgcolor, textcolor]
+const dark = ["#040D12", "#93B1A6"];
 const light = ["#FAEED1", "#607274"];
 
 

@@ -206,7 +206,9 @@ a{
     position: fixed;
     bottom: 2vw;
     right: 2vw;
-    padding: 1vh;
+    width: 3rem;
+    text-align: center;
+    aspect-ratio: 1/1;
     border: solid 2px;
     border-radius: 8px;
     box-shadow: 2px 2px 0px 0px var(--text-color);
@@ -216,6 +218,9 @@ a{
 }
 #switch-theme>span{
     font-size: var(--text-font-size);
+    top: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;
 }
 #switch-theme:hover{
     transform: translateX(1px) translateY(1px);
@@ -436,11 +441,39 @@ a{
     align-self: flex-end;
 }
 
+.code-percentage{
+    width: 100%;
+    height: 20px;
+    border-radius: 15px;
+    background-color: var(--text-color);
+}
+.code-percentage:nth-child(1){
+    color: blue;
+    background-color: blue;
+    height: 100%;
+    width: 80%;
+    display: block;
+}
+.code-percentage:nth-child(2){
+    color: yellow;
+    background-color: yellow;
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+.code-percentage:last-child(){
+    height:100%;
+    width: 100%;
+    display: block;
+    background-color: var(--text-color);
+}
+
 
 
 @media screen and (max-width: 800px) {
     :root{
-        --title-font-size: 1rem;
+        --title-font-size: 1.2rem;
+        --text-font-size: 1rem;
     }
     .btn-grid {
         display: block;
@@ -459,7 +492,7 @@ a{
     }
     .documentation-content{
         width:  calc(100% - 4rem);
-        margin: 5rem 0;
+        margin: 5rem 0 0 1rem;
     }
     .profile-img{
         width: 30dvw;
